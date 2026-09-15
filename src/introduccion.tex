@@ -2,9 +2,12 @@ Tres cantidades fundamentales cuando se habla de circuitos electronicos son la
 corriente (A), el voltaje (V) y la resistencia (R). Un instrumento que permite
 la medicion de estas cantidades usandolo en diferentes configuraciones es el
 galvanometro de D'Arsonval.
-
-% grafico del galvanometro
-
+%
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{res/galvanometro.png}
+\caption{Galvanometro}
+\end{figure}
+%
 El Galvanometro usa el angulo de equilibrio entre el torque magnetico y el
 torque elastico para marcar una medida de la corriente que pasa por su
 emboninado. El torque magnetico viene dado por ${\bf r}\times{\bf F}_m$, donde
@@ -15,29 +18,38 @@ con lo que el torque total es $[anibB_0-k\theta]\hat{\bf z}$, con lo que el
 punto donde el torque se anula y llega a un punto de equilibrio es
 $$\theta=\frac{nAB_0}{k}i$$, esto es una relacion lineal entre el corriente y el
 angulo permitiendo medor corrientes con facilidad midiendo un angulo.
-
-% grafico de esquema de galvanometro
-
+%
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{res/galvanometro-esquema.png}
+\caption{Esquema de galvanometro}
+\end{figure}
+%
 Cuando se hace referencia a un Galvanometro real, hay que considerar su
 resistencia interna, la cual se puede respresenta como $R_G$ en serie con el
 galvanometro. Este instrumento naturalmente tiene una corriente maxima que puede
 marcar $I_g^{max}$, la manera en la que se puede variar esta escala es
 conectando una resistencia en paralelo en la siguiente configuracion
-
-% grafico de esquema de amperimetro
-
+%
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{res/amperimetro-esquema.png}
+\caption{Esquema de amperimetro}
+\end{figure}
+%
 de esta manera, si queremos que la marca maxima de nuestro galvanometro marque
 una $I^{max}$, la resistencia que debemos colocar para nuestro amperimetro $R_A$
 sera $$R_A=\frac{R_gI^{max}}{I^{max}-I_G^{max}}$$
 Ademas de amperimetro, se puede usar el galvanometro en la siguiente
 configuracion para usarse como voltimetro
-
-% grafico de esquema de voltimetro
-
+%
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{res/voltimetro-esquema.png}
+\caption{Esquema de voltimetro}
+\end{figure}
+%
 donde se agrega una resistencia en paralelo para ajustar la escala de nuestro
 voltimetro $R_V$, donde si queremos que la marca maxima de nuestro Galvanometro
 marque $V^{max}$, $R_V$ sera $$R_V=\frac{V^{max}-I_G^{max}R_G}{I_G^{max}}$$
-
+%
 En la siguiente practica se realizo el montaje en el simulador CircuitJS, por
 Paul Falstad (\url{https://www.falstad.com/circuit/circuitjs.html}), de un
 amperimetro y un voltimetro usando un galvanometro.
