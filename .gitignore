@@ -1,2 +1,10 @@
 bld
 *.pdf
+*.log
+*.bbl
+*.aux
+*.out
+*.bib
+*.xml
+*.gz
+*.blg
