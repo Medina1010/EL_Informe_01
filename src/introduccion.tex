@@ -7,16 +7,28 @@ D'Arsonval el cual, dependiendo de su configuración en el circuito, puede actua
 como un amperímetro, voltímetro u ohmímetro. En la Fig. \ref{fig:galvani} se muestra un esquema del galvanómetro junto con su mecanismo.
 %
 \begin{figure}[b!]
-\centering
-\includegraphics[width=0.5\linewidth]{res/galvanometro-esquema-real.png}
-	\caption{Esquema del galvan\'ometro. Los im\'anes generan un torque
-			magn\'etico sobre el enbobinado debido a la corriente que circula
-			por el tramo vertical. El punto de equilibro entre el torque
-			magn\'etico y el generado por el resorte de torsi\'on est\'a
-			indicado por la aguja, que mide la corriente $i$ entre un
-			intervalo definido entre $\pm I_g^{\mathrm{max}}$.
-			}
-\label{fig:galvani}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/galvanometro-esquema-real.png}
+	\caption{Esquema de funcionamiento del galvan\'ometro. 
+	}
+	\label{fig:galvani}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/galvanometro-esquema.png}
+	\caption{Esquema electrónico del galvanometro.}
+	\label{fig:galvani-esquema}
+\end{subfigure}
+\caption{
+	(a) Los im\'anes generan un torque magn\'etico sobre el enbobinado debido a
+	la corriente que circula por el tramo vertical. El punto de equilibro entre
+	el torque magn\'etico y el generado por el resorte de torsi\'on est\'a
+	indicado por la aguja, que mide la corriente $i$ entre un
+	intervalo definido entre $\pm I_g^{\mathrm{max}}$.
+	(b) La resistencia interna del galvanómetro se representa mediante un resistor
+	adicional en serie.
+}
 \end{figure}
 %
 
@@ -27,13 +39,7 @@ torsión $\theta$ del enbobinado es directamente proporcional a la corriente $i$
 especificamente de la forma $\theta=\frac{nabB_0}{k}i$, lo cual establece una relación
 lineal entre ambos parámetros. Esta propiedad proporciona un mecanismo conveniente
 para medir corrientes pequeñas.
-%
-\begin{figure}[H]
-\includegraphics[width=\linewidth]{res/galvanometro-esquema.png}
-\caption{Esquema de galvanometro}
-\label{fig:galvani-esquema}
-\end{figure}
-%
+
 Debido a la alta sensibilidad del galvan\'ometro, es necesario considerar su
 resistencia interna. Esquemáticamente, dicha resistencia se puede representar
 como un resistor $R_g$ en serie con el galvanómetro, como se muestra en la
