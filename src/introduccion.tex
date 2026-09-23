@@ -1,29 +1,43 @@
-Tres cantidades fundamentales cuando se habla de circuitos electronicos son la
-corriente (A), el voltaje (V) y la resistencia (R). Un instrumento que permite
-la medicion de estas cantidades usandolo en diferentes configuraciones es el
-galvanometro de D'Arsonval.
+En un circuito eléctrico existen tres cantidades fundamentales que permiten la
+circulación de la carga; la corriente, el voltaje y la resistencia. En la
+práctica, medir dichas cantidades es necesario para caracterizar los componentes
+de un circuito, dado que generalmente se desconocen sus propiedades eléctricas.
+Un instrumento que permite la medicion de estas cantidades es el galvanómetro de
+D'Arsonval el cual, dependiendo de su configuración en el circuito, puede actuar
+como un amperímetro, voltímetro u ohmímetro. En la Fig. \ref{fig:galvani} se muestra un esquema del galvanómetro junto con su mecanismo.
 %
-\begin{figure}[H]
-\includegraphics[width=\linewidth]{res/galvanometro.png}
-\caption{Galvanometro}
+\begin{figure}[b!]
+\centering
+\includegraphics[width=0.5\linewidth]{res/galvanometro-esquema-real.png}
+	\caption{Esquema del galvan\'ometro. Los im\'anes generan un torque
+			magn\'etico sobre el enbobinado debido a la corriente que circula
+			por el tramo vertical. El punto de equilibro entre el torque
+			magn\'etico y el generado por el resorte de torsi\'on est\'a
+			indicado por la aguja, que mide la corriente $i$ entre un
+			intervalo definido entre $\pm I_g^{\mathrm{max}}$.
+			}
+\label{fig:galvani}
 \end{figure}
 %
-El Galvanometro usa el angulo de equilibrio entre el torque magnetico y el
-torque elastico para marcar una medida de la corriente que pasa por su
-emboninado. el angulo de equilibrio es $$\theta=\frac{nAB_0}{k}i$$, esto es una
-relacion lineal entre el corriente y el angulo permitiendo medor corrientes con
-facilidad midiendo un angulo.
+
+En esencia, el galvanometro mide la corriente que circula sobre él en un intervalo
+del órden de $10^{-6}$\unit{\meter}, en principio, convirtiendolo en un
+amperímetro. Es especialmente utilizado debido a que el ángulo de
+torsión $\theta$ del enbobinado es directamente proporcional a la corriente $i$,
+especificamente de la forma $\theta=\frac{nabB_0}{k}i$, lo cual establece una relación
+lineal entre ambos parámetros. Esta propiedad proporciona un mecanismo conveniente
+para medir corrientes pequeñas.
 %
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{res/galvanometro-esquema.png}
 \caption{Esquema de galvanometro}
+\label{fig:galvani-esquema}
 \end{figure}
 %
-Cuando se hace referencia a un Galvanometro real, hay que considerar su
-resistencia interna, la cual se puede respresenta como $R_G$ en serie con el
-galvanometro. Este instrumento naturalmente tiene una corriente maxima que puede
-marcar $I_g^{max}$, la manera en la que se puede variar esta escala es
-conectando una resistencia en paralelo en la siguiente configuracion
+Debido a la alta sensibilidad del galvan\'ometro, es necesario considerar su
+resistencia interna. Esquemáticamente, dicha resistencia se puede representar
+como un resistor $R_g$ en serie con el galvanómetro, como se muestra en la
+Fig. \ref{fig:galvani-esquema}.
 %
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{res/amperimetro-esquema.png}
