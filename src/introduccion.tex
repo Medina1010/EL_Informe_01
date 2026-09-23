@@ -10,14 +10,9 @@ galvanometro de D'Arsonval.
 %
 El Galvanometro usa el angulo de equilibrio entre el torque magnetico y el
 torque elastico para marcar una medida de la corriente que pasa por su
-emboninado. El torque magnetico viene dado por ${\bf r}\times{\bf F}_m$, donde
-el brazo ${\bf r}$ es $a/2\hat{\bf r}$ y la fuerza magnetica
-$n(ib\hat{\bf z})\times(B_0\hat{\bf r})$, con lo que el torque magnetico es
-$anibB_0\hat{\bf z}$ y como el torque elastico es $-k\theta\hat{\bf z}$,
-con lo que el torque total es $[anibB_0-k\theta]\hat{\bf z}$, con lo que el
-punto donde el torque se anula y llega a un punto de equilibrio es
-$$\theta=\frac{nAB_0}{k}i$$, esto es una relacion lineal entre el corriente y el
-angulo permitiendo medor corrientes con facilidad midiendo un angulo.
+emboninado. el angulo de equilibrio es $$\theta=\frac{nAB_0}{k}i$$, esto es una
+relacion lineal entre el corriente y el angulo permitiendo medor corrientes con
+facilidad midiendo un angulo.
 %
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{res/galvanometro-esquema.png}
@@ -37,7 +32,11 @@ conectando una resistencia en paralelo en la siguiente configuracion
 %
 de esta manera, si queremos que la marca maxima de nuestro galvanometro marque
 una $I^{max}$, la resistencia que debemos colocar para nuestro amperimetro $R_A$
-sera $$R_A=\frac{R_gI^{max}}{I^{max}-I_G^{max}}$$
+sera
+\begin{equation}
+	R_A=\frac{R_gI^{max}}{I^{max}-I_G^{max}}
+	\label{eq: ra}
+\end{equation}
 Ademas de amperimetro, se puede usar el galvanometro en la siguiente
 configuracion para usarse como voltimetro
 %
@@ -48,7 +47,11 @@ configuracion para usarse como voltimetro
 %
 donde se agrega una resistencia en paralelo para ajustar la escala de nuestro
 voltimetro $R_V$, donde si queremos que la marca maxima de nuestro Galvanometro
-marque $V^{max}$, $R_V$ sera $$R_V=\frac{V^{max}-I_G^{max}R_G}{I_G^{max}}$$
+marque $V^{max}$, $R_V$ sera
+\begin{equation}
+	R_V=\frac{V^{max}-I_G^{max}R_G}{I_G^{max}}
+	\label{eq: rv}
+\end{equation}
 %
 En la siguiente practica se realizo el montaje en el simulador CircuitJS, por
 Paul Falstad (\url{https://www.falstad.com/circuit/circuitjs.html}), de un

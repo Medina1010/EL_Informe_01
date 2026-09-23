@@ -1,0 +1,22 @@
+\subsection{Materiales}
+\begin{itemize}
+\item Computadora
+\end{itemize}
+\subsection{Montaje}
+El montaje consistio de armar un amperimetro y un voltimetro en el simluador
+{\it CircuitJS} de {\it Falstad} \cite{falstad}.
+
+Para esto se tomo el elemento amperimetro del simulador para funcionar como
+galvanometro, en el simulador este tiene resistencia interna nula. Con lo cual
+para el galvanometro "real", se añadio una resistencia en serie como la interna
+del galvanometro. A este circuito se llamara {\it G}.
+
+Para la construccion del amperimetro se tomo {\it G} y se agrego una
+resistencia $R_A$ en paralelo para ajustar la escala del galvanometro a una
+corriente maxima $I^{max}$, con un valor dado por ec.\ref{eq: ra}. A este
+circuito se le llamara {\it A}
+
+Para la construccion del voltimetro se tomo {\it G} y se agrego una resistencia
+$R_V$ en serie para ajustar la escala del galvanometro a un voltaje maximo
+$V^{max}$, con un valor dado por ec.\ref{eq: rv}. A este circuito se le llamara
+{\it V}.
