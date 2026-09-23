@@ -32,7 +32,11 @@ conectando una resistencia en paralelo en la siguiente configuracion
 %
 de esta manera, si queremos que la marca maxima de nuestro galvanometro marque
 una $I^{max}$, la resistencia que debemos colocar para nuestro amperimetro $R_A$
-sera $$R_A=\frac{R_gI^{max}}{I^{max}-I_G^{max}}$$
+sera
+\begin{equation}
+	R_A=\frac{R_gI^{max}}{I^{max}-I_G^{max}}
+	\label{eq: ra}
+\end{equation}
 Ademas de amperimetro, se puede usar el galvanometro en la siguiente
 configuracion para usarse como voltimetro
 %
@@ -43,7 +47,11 @@ configuracion para usarse como voltimetro
 %
 donde se agrega una resistencia en paralelo para ajustar la escala de nuestro
 voltimetro $R_V$, donde si queremos que la marca maxima de nuestro Galvanometro
-marque $V^{max}$, $R_V$ sera $$R_V=\frac{V^{max}-I_G^{max}R_G}{I_G^{max}}$$
+marque $V^{max}$, $R_V$ sera
+\begin{equation}
+	R_V=\frac{V^{max}-I_G^{max}R_G}{I_G^{max}}
+	\label{eq: rv}
+\end{equation}
 %
 En la siguiente practica se realizo el montaje en el simulador CircuitJS, por
 Paul Falstad (\url{https://www.falstad.com/circuit/circuitjs.html}), de un
