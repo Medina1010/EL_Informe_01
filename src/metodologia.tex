@@ -1,22 +1,64 @@
-\subsection{Materiales}
-\begin{itemize}
-\item Computadora
-\end{itemize}
-\subsection{Montaje}
-El montaje consistio de armar un amperimetro y un voltimetro en el simluador
-{\it CircuitJS} de {\it Falstad} \cite{falstad}.
+Se utilizó el simulador {\it CircuitJS} de {\it Falstad} \cite{falstad}
+para construir el amperímetro y voltímetro en la Fig. \ref{fig:cositas}.
+El simulador no dispone de un galvanómetro, por lo que se utilizó un amperímetro
+en su lugar; en una simulación, ambos son idénticos.
 
-Para esto se tomo el elemento amperimetro del simulador para funcionar como
-galvanometro, en el simulador este tiene resistencia interna nula. Con lo cual
-para el galvanometro "real", se añadio una resistencia en serie como la interna
-del galvanometro. A este circuito se llamara {\it G}.
+Primero, se construyó el galvanómetro real agregando una resistencia $R_g$ en serie,
+con un valor de \qty{900}{\ohm} y con una corriente máxima
+$I_g^{max}=$\qty{40}{\micro\ampere}. Este circuito se llama {\bf G}. Después, se construyó
+un amperímetro de escala máxima $I^{max}=$\qty{4}{\milli\ampere}, 
+tomando {\bf G} y agregando la resistencia $R_A$ en paralelo. Este circuito se llama
+{\bf A}. Luego, se construyó un voltímetro de escala máxima
+$V^{max}=$\qty{12}{\volt}, tomando {\bf G} y agregando la resistencia $R_V$ en
+serie. Este circuito se llama {\bf V}.
 
-Para la construccion del amperimetro se tomo {\it G} y se agrego una
-resistencia $R_A$ en paralelo para ajustar la escala del galvanometro a una
-corriente maxima $I^{max}$, con un valor dado por ec.\ref{eq: ra}. A este
-circuito se le llamara {\it A}
+Posteriormente, para utilizar el amperímetro se construyó un circuito base con una fuente
+de voltaje $V=$\qty{5}{\volt} y una resistencia $R=$\qty{2500}{\ohm}. Similarmente, para
+utilizar el
+voltímetro se construyó un circuito base con una fuente de voltaje $V=$\qty{12}{\volt}
+y con dos resistencias $R_1=$\qty{300}{\kilo\ohm} y $R_2=$\qty{100}{\kilo\ohm}, colocando
+el voltímetro en los extremos de $R_2$. Después, se cambió la escala máxima de {\bf V} a $V^{max}=$\qty{4}{\volt} en el mismo
+circuito y, finalmente, se cambiaron las resistencias $R_1$ y $R_2$ por
+\qtylist{30;10}{\kilo\ohm} respectivamente.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[h]{.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{res/voltimetro-circuito-12-100k.png}
+		\caption{$V^{max}=12$\unit{\volt}. $R_1,R_2\sim$\qty{100}{\kilo\ohm}.
+		}
+		\label{fig:volt-100k-12}
+	\end{subfigure}%
+	\begin{subfigure}[h]{.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{res/voltimetro-circuito-4-100k.png}
+		\caption{$V^{max}=4$\unit{\volt}. $R_1,R_2\sim$\qty{100}{\kilo\ohm}.
+		}
+		\label{fig:volt-100k-4}
+	\end{subfigure}
+	
+	\begin{subfigure}[h]{.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{res/voltimetro-circuito-12-10k.png}
+		\caption{$V^{max}=12$\unit{\volt}. $R_1,R_2\sim$\qty{10}{\kilo\ohm}.
+		}
+		\label{fig:volt-10k-12}
+	\end{subfigure}%
+	\begin{subfigure}[h]{.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{res/voltimetro-circuito-4-10k.png}
+		\caption{$V^{max}=4$\unit{\volt}. $R_1,R_2\sim$\qty{10}{\kilo\ohm}.
+		}
+		\label{fig:volt-10k-4}
+	\end{subfigure}%
+	\caption{Circuitos construidos en la práctica para utilizar el voltímetro.}
+	\label{fig:medinateodio}
+\end{figure}
 
-Para la construccion del voltimetro se tomo {\it G} y se agrego una resistencia
-$R_V$ en serie para ajustar la escala del galvanometro a un voltaje maximo
-$V^{max}$, con un valor dado por ec.\ref{eq: rv}. A este circuito se le llamara
-{\it V}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\linewidth]{res/amperimetro-circuito.png}
+	\caption{Circuito construido en la práctica para utilizar el amperímetro.
+			$I^{max}=4$\unit{\milli\ampere}}
+	\label{fig:medina}
+\end{figure}
