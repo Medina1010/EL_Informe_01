@@ -5,19 +5,20 @@ de un circuito, dado que generalmente se desconocen sus propiedades eléctricas.
 Un instrumento que permite la medicion de estas cantidades es el galvanómetro de
 D'Arsonval el cual, dependiendo de su configuración en el circuito, puede actuar
 como un amperímetro, voltímetro u ohmímetro. En la Fig. \ref{fig:galvani} se muestra un esquema del galvanómetro junto con su mecanismo.
+\end{multicols}
 \begin{figure}[H]
-	\begin{subfigure}[h]{.5\textwidth}
+	\begin{subfigure}[h]{.6\textwidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{res/galvanometro-esquema-real.png}
+		\includegraphics[width=0.85\linewidth]{res/galvanometro-esquema-real.png}
 		\caption{Esquema de funcionamiento del galvan\'ometro. 
 		}
 		\label{fig:galvani}
 	\end{subfigure}%
-	\begin{subfigure}[h]{.5\textwidth}
+	\begin{subfigure}[h]{.4\textwidth}
 		\centering
-		\vskip 60pt
-		\includegraphics[width=0.8\linewidth]{res/galvanometro.pdf}
-		\vskip 70pt
+		\vskip 80pt
+		\includegraphics[width=\linewidth]{res/galvanometro.pdf}
+		\vskip 90pt
 		%\includegraphics[width=0.8\linewidth]{res/galvanometro-esquema.png}
 		\caption{Esquema electrónico del galvanometro.}
 		\label{fig:galvani-esquema}
@@ -31,7 +32,7 @@ como un amperímetro, voltímetro u ohmímetro. En la Fig. \ref{fig:galvani} se 
 		adicional en serie.
 	}
 \end{figure}
-%
+\begin{multicols}{2}
 En esencia, el galvanometro mide la corriente que circula sobre él en un intervalo
 del órden de $10^{-6}$\unit{\ampere}, en principio, convirtiendolo en un
 amperímetro. Es especialmente utilizado debido a que el ángulo de
@@ -74,35 +75,27 @@ Para un amperímetro que mide hasta $I^{max}$, la resistencia auxiliar se
 coloca \textit{paralela} al galvanómetro, y está dada por la Ec. \ref{eq:R_A}. Usando
 la corriente reportada por el galvanómetro $I_g$, es posible determinar la corriente
 real $I$ a partir de la Ec. \ref{eq:I}
-
-\begin{center}
-	\begin{tabular}{p{5cm}p{5cm}}
-		\begin{equation}\label{eq:R_A}
-			R_A=\frac{R_gI^{max}}{I^{max}-I_g^{max}}.
-		\end{equation}
-		&
-		\begin{equation}\label{eq:I}
-			I=I_g\frac{I^{max}}{I_g^{max}}.
-		\end{equation}
-	\end{tabular}
-\end{center}
+%
+\begin{equation}\label{eq:R_A}
+R_A=\frac{R_gI^{max}}{I^{max}-I_g^{max}}.
+\end{equation}
+%
+\begin{equation}\label{eq:I}
+	I=I_g\frac{I^{max}}{I_g^{max}}.
+\end{equation}
 
 Por otro lado, para un voltímetro que mide hasta $V^{max}$, la resistencia
 auxiliar se coloca en \textit{serie} con el galvanómetro, y está dada por la Ec.
 \ref{eq:R_V}. Similarmente, usando la corriente del galvanómetro se determina
 el voltaje a partir de la Ec. \ref{eq:V}.
-
-\begin{center}
-	\begin{tabular}{p{6cm}p{5cm}}
-		\begin{equation}\label{eq:R_V}
-			R_V=\frac{V^{max}-I_g^{max}R_g}{I_g^{max}}
-		\end{equation}
-		&
-		\begin{equation}\label{eq:V}
-			V=I_g\frac{V^{max}}{I_g^{max}}
-		\end{equation}
-	\end{tabular}
-\end{center}
+%
+\begin{equation}\label{eq:R_V}
+	R_V=\frac{V^{max}-I_g^{max}R_g}{I_g^{max}}
+\end{equation}
+%
+\begin{equation}\label{eq:V}
+	V=I_g\frac{V^{max}}{I_g^{max}}	
+\end{equation}
 
 En ese sentido, en el presente informe se analizaron las medidas reportadas
 por el voltímetro y amperímetro elaborados a partir de un galvanómetro, con el
