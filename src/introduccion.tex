@@ -26,29 +26,24 @@ como un amperímetro, voltímetro u ohmímetro. En la Fig. \ref{fig:galvani} se 
 		(a) Los im\'anes generan un torque magn\'etico sobre el enbobinado debido a
 		la corriente que circula por el tramo vertical. El punto de equilibro entre
 		el torque magn\'etico y el generado por el resorte de torsi\'on est\'a
-		indicado por la aguja, que mide la corriente $i$ entre un
-		intervalo definido entre $\pm I_g^{\mathrm{max}}$.
+		indicado por la aguja, que mide la corriente $i$ entre $\pm I_g^{\mathrm{max}}$.
 		(b) La resistencia interna del galvanómetro se representa mediante un resistor
 		adicional en serie.
 	}
 \end{figure}
 %
 En esencia, el galvanometro mide la corriente que circula sobre él en un intervalo
-del órden de $10^{-6}$\unit{\meter}, en principio, convirtiendolo en un
+del órden de $10^{-6}$\unit{\ampere}, en principio, convirtiendolo en un
 amperímetro. Es especialmente utilizado debido a que el ángulo de
 torsión $\theta$ del enbobinado es directamente proporcional a la corriente $i$,
-especificamente de la forma $\theta=\frac{nabB_0}{k}i$, lo cual establece una relación
-lineal entre ambos parámetros. Esta propiedad proporciona un mecanismo conveniente
-para medir corrientes pequeñas.
-
-Debido a la alta sensibilidad del galvan\'ometro, es necesario considerar su
+lo cual establece una relación lineal entre ambos parámetros. Esta propiedad proporciona
+un mecanismo conveniente para medir corrientes pequeñas. Por otro lado,
+debido a la alta sensibilidad del galvan\'ometro, es necesario considerar su
 resistencia interna. Esquemáticamente, dicha resistencia se puede representar
 como un resistor $R_g$ en serie con el galvanómetro, como se muestra en la
 Fig. \ref{fig:galvani-esquema}.
 
-Con
-%
-\begin{figure}[H]
+\begin{figure}[t]
 	\begin{subfigure}[h]{.5\textwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{res/circuit-amperimetro.pdf}
@@ -65,33 +60,52 @@ Con
 	\end{subfigure}
 	\caption{
 		(a) El galvanómetro se conecta en paralelo con una resistencia $R_A$, el cual
-			determina la escala del amperímetro de acuerdo a la Ec. ?.
+		determina la escala del amperímetro de acuerdo a la Ec. ?.
 		(b) El galvanómetro se conecta en serie con una resistencia $R_V$, el cual
-			determina la escala del voltímetro de acuerdo a la Ec. ? para medir la
-			caída de potencial en los extremos de la resistencia.
+		determina la escala del voltímetro de acuerdo a la Ec. ? para medir la
+		caída de potencial en los extremos de la resistencia.
 	}
+	\label{fig:cositas}
 \end{figure}
 
-%
-de esta manera, si queremos que la marca maxima de nuestro galvanometro marque
-una $I^{max}$, la resistencia que debemos colocar para nuestro amperimetro $R_A$
-sera
-\begin{equation}
-	R_A=\frac{R_gI^{max}}{I^{max}-I_G^{max}}
-	\label{eq: ra}
-\end{equation}
-Ademas de amperimetro, se puede usar el galvanometro en la siguiente
-configuracion para usarse como voltimetro
+Con lo anterior, es posible configurar el galvanómetro con una resistencia auxiliar
+encargada de extender la escala del órden de $10^{-6}$\unit{\ampere} con el fin de
+medir corrientes mayores y caídas de potencial entre dos nodos. En la Fig.\ref{fig:cositas} se muestra el esquema electrónico de ambos instrumentos.
+Para un amperímetro que mide hasta $I^{max}$, la resistencia auxiliar se
+coloca \textit{paralela} al galvanómetro, y está dada por la Ec. \ref{eq:R_A}. Usando
+la corriente reportada por el galvanómetro $I_g$, es posible determinar la corriente
+real $I$ a partir de la Ec. \ref{eq:I}
 
-%
-donde se agrega una resistencia en paralelo para ajustar la escala de nuestro
-voltimetro $R_V$, donde si queremos que la marca maxima de nuestro Galvanometro
-marque $V^{max}$, $R_V$ sera
-\begin{equation}
-	R_V=\frac{V^{max}-I_G^{max}R_G}{I_G^{max}}
-	\label{eq: rv}
-\end{equation}
-%
-En la siguiente practica se realizo el montaje en el simulador CircuitJS, por
-Paul Falstad (\url{https://www.falstad.com/circuit/circuitjs.html}), de un
-amperimetro y un voltimetro usando un galvanometro.
+\begin{center}
+	\begin{tabular}{p{5cm}p{5cm}}
+		\begin{equation}\label{eq:R_A}
+			R_A=\frac{R_gI^{max}}{I^{max}-I_g^{max}}.
+		\end{equation}
+		&
+		\begin{equation}\label{eq:I}
+			I=I_g\frac{I^{max}}{I_g^{max}}.
+		\end{equation}
+	\end{tabular}
+\end{center}
+
+Por otro lado, para un voltímetro que mide hasta $V^{max}$, la resistencia
+auxiliar se coloca en \textit{serie} con el galvanómetro, y está dada por la Ec.
+\ref{eq:R_V}. Similarmente, usando la corriente del galvanómetro se determina
+el voltaje a partir de la Ec. \ref{eq:V}.
+
+\begin{center}
+	\begin{tabular}{p{6cm}p{5cm}}
+		\begin{equation}\label{eq:R_V}
+			R_V=\frac{V^{max}-I_g^{max}R_g}{I_g^{max}}
+		\end{equation}
+		&
+		\begin{equation}\label{eq:V}
+			V=I_g\frac{V^{max}}{I_g^{max}}
+		\end{equation}
+	\end{tabular}
+\end{center}
+
+En ese sentido, en el presente informe se analizaron las medidas reportadas
+por el voltímetro y amperímetro elaborados a partir de un galvanómetro, con el
+fin de entender su principio de medición y determinar confiabilidad de los
+instrumentos.
