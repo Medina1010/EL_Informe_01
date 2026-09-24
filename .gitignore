@@ -1,5 +1,5 @@
 bld
-*.pdf
+main.pdf
 *.log
 *.bbl
 *.aux
