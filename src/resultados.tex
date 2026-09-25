@@ -1,16 +1,30 @@
-En las Fig. \ref{fig:medinateodio} y \ref{fig:medina} se muestran los circuito utilizados
+En las Fig. \ref{fig:medina} y \ref{fig:medinateodio} se muestran los circuito utilizados
 con el amperímetro y voltímetro respectivamente. Se incluyen las etiquetas de cada
-componente eléctrico, al igual que sus respectivos valores. Por otro lado,
+componente eléctrico, al igual que sus respectivos valores; $R_A$ y $R_V$ fueron
+calculados utilizando las Eq. \ref{eq:R_A} y \ref{eq:R_V}. Por otro lado,
 en la Tab. \ref{tab:medidas} se presenta las medidas de corriente y voltaje del instrumento
 correspondiente en cada uno de los circuitos, calculados utilizando las
 Eq. \ref{eq:I} y \ref{eq:V}
 \end{multicols}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.25\linewidth]{res/amperimetro-circuito.png}
-	\caption{Circuito construido en la práctica para utilizar el amperímetro.
-		$I^{max}=4$\unit{\milli\ampere}}
+	\begin{subfigure}[h]{.5\textwidth}
+		\centering
+		\includegraphics[width=0.5\linewidth]{res/amperimetro-circuito-2.png}
+		\caption{$R=$\qty{1,25}{\kilo\ohm},
+		}
+		\label{fig:amp-125}
+	\end{subfigure}%
+	\begin{subfigure}[h]{.5\textwidth}
+		\centering
+		\includegraphics[width=0.5\linewidth]{res/amperimetro-circuito.png}
+		\caption{$R=$\qty{2,5}{\kilo\ohm}
+		}
+		\label{fig:amp-25}
+	\end{subfigure}
+	
 	\label{fig:medina}
+	\caption{Circuitos construido en la práctica para utilizar el amperímetro.}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -53,13 +67,14 @@ Eq. \ref{eq:I} y \ref{eq:V}
 	\centering
 	\caption{Medidas experimentales y reales de cada parámetro medido por el
 			galvanómetro en los circuitos.}
-	\begin{tabular}{c|c|c|c}
-		Circuito&Medida del Galvanómetro (\unit{\milli\ampere})&Cantidad Experimental&Cantidad Real \\ \hline
-		Fig. \ref{fig:medina} 	   &19,928&\qty{1,9928}{\milli\ampere}&\qty{2}{\milli\ampere}\\
-		Fig. \ref{fig:volt-100k-12}&8,000 &\qty{2,4000}{\volt}&\qty{3}{\volt}\\
-		Fig. \ref{fig:volt-100k-4} &17,143&\qty{1,7143}{\volt}&\qty{3}{\volt}\\
-		Fig. \ref{fig:volt-10k-12} &9,756 &\qty{2,9268}{\volt}&\qty{3}{\volt}\\
-		Fig. \ref{fig:volt-10k-4}  &27,907&\qty{2,7907}{\volt}&\qty{3}{\volt}\\
+	\begin{tabular}{c|c|c|c|c}
+		Circuito&Galvanómetro (\unit{\milli\ampere})&Valor Experimental&Valor Real&Error Relativo Porcentual \\ \hline
+		Fig. \ref{fig:amp-25} 	   &39,714&\qty{3,9714}{\milli\ampere}&\qty{4}{\milli\ampere}&0,71\\
+		Fig. \ref{fig:amp-125} 	   &19,928&\qty{1,9928}{\milli\ampere}&\qty{2}{\milli\ampere}&0,36\\
+		Fig. \ref{fig:volt-100k-12}&8,000 &\qty{2,4000}{\volt}&\qty{3}{\volt}&20\\
+		Fig. \ref{fig:volt-100k-4} &17,143&\qty{1,7143}{\volt}&\qty{3}{\volt}&42\\
+		Fig. \ref{fig:volt-10k-12} &9,756 &\qty{2,9268}{\volt}&\qty{3}{\volt}&2,4\\
+		Fig. \ref{fig:volt-10k-4}  &27,907&\qty{2,7907}{\volt}&\qty{3}{\volt}&7,5\\
 	\end{tabular}
 	\label{tab:medidas}
 \end{table}

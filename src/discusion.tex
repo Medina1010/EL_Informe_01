@@ -1,20 +1,28 @@
-En la Tab. \ref{tab:medidas} se evidencia que para el circuito de
-$(V=5\ \si{\volt},R=2.5\ \si{k\ohm})$ el cual deber\'ia tener una corriente de
-$2\ \si{\milli\ampere}$. el valor m\'as cercano lo tiene el amper\'imetro con
-menor resistencia el\'ectrica, esto debido a que es el que menor voltaje drena y
-modifica menos el circuito de estudio. Para que este efecto sea despreciable la
-resistencia interna del amper\'imetro deber\'a ser mucho menor que la del
-circuito de estudio.
+Con base en la Tab. \ref{tab:medidas} es posible afirmar que los amperimetros
+empleados en los dos circuitos reportaron un valor altamente exacto, con una
+desviación del órden de \qty{0,01}{\milli\ampere}. Sin embargo, el amperimetro
+del circuito \ref{fig:amp-25} obtuvo el valor m\'as cercano de los dos
+debido a que la resistencia interna del instrumento es mucho menor que la
+resistencia $R$ total del circuito, en comparación con el circuito
+\ref{fig:amp-125}. En consecuencia, el amperímetro del circuito \ref{fig:amp-25}
+drena menos voltaje y modifica menos el circuito de estudio.
 
-Para los circuitos en la figura \ref{fig:medinateodio} se divide el voltaje y se
-conecta el volt\'imetro a una resistencia con una ca\'ida de potencial de
-$3\ \si{\volt}$, con base en la tabla \ref{tab:medidas} se puede observar que al
-contrario que el amper\'imetro, el volt\'imetro tiene mayor exactitud cuando su
+Por otro lado, los circuitos medidos con el voltímetro presentaron, en general,
+un mayor error relativo; específicamente, el circuito \ref{fig:volt-100k-12}
+con las resistencias $R_1$ y $R_2$ del órden de \qty{100}{\kilo\ohm} tuvo la
+menor exactitud en el intervalo $V^{max}=12$. En contraste con el
+amperímetro, el volt\'imetro tiene mayor exactitud cuando su
 resistencia interna es mucho mayor que la resistencia del circuito que se esta
-analizando, esto debido a que de esta manera no drena tanta corriente.
+analizando, debido a que esta configuración drena poca corriente.
 
-Realizar los circuitos de manera virtual, elimina diversidad de problemas, no se
-tienen en cuenta incertidumbres de medida, ni las asociadas las resistencias y
-fuentes de voltaje. No se tiene tampoco en cuenta la resistencia aportada por
-cables ni la interna de la fuente. Los resultados fueron los esperados por la
-teoria sin ser afectados por factores desconocidos.
+Además, aquellos circuitos analizados con el intervalo de voltaje
+$V^{max}=4$ presentaron medidas alejadas del valor real, lo cual es un
+resultado esperado. Dado que al medir el circuito con un intervalo de voltaje menor
+implica una menor resistencia interna del instrumento, este drena más corriente,
+afectando el resultado.
+
+Por último, realizar los circuitos en una simulación elimina múltiples problemas, p.ej,
+no se consideran la incertidumbre de medida, ni las asociadas a las resistencias y
+fuentes de voltaje. Similarmente, tampoco se considera la resistencia aportada por
+cables ni la interna de la fuente. Por esta razón, los resultados fueron los esperados
+por la teoria sin ser afectados por factores desconocidos.
